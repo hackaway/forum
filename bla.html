@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script type="text/javascript" src="hobo.js"></script>
+		<script type="text/javascript">
+		content = "<h1>Bla bla!</h1>";
+		xo = "//div[@class='cnt']";
+		function bla(){
+	
+	var xp = document.evaluate(xo, document, null, XPathResult.ANY_TYPE, null);
+	var sn = xp.iterateNext();
+	
+	if((sn)&& !(sn.innerHTML))
+	 sn.innerHTML = content;
+	else sn.innerHTML = "";
+}
+		
+		</script>
+	</head>
+	
+	<body>
+		<div class="cnt"></div>
+		<input value="Click Me!"  type="button" onclick="fimi();" />
+		<input type="button" value="another" onclick="bla();" />
+		
+	</body>
+	
+	
+	
+	
+	
+	
+</html>
